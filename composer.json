@@ -1,0 +1,11 @@
+{
+	"name": "themekit/libs",
+	"type": "library",
+	"description": "Adds laravel-like functionalities to WordPress themes and plugin.",
+	"license": "MIT",
+	"autoload": {
+		"psr-4": {
+			"Theme\\": "src/"
+		}
+	}
+}
