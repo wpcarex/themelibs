@@ -158,23 +158,23 @@ class Bootstrap {
 		// -----------------------------------------------------------------------
 		// Set Config Data.
 		// -----------------------------------------------------------------------
-		self::$name = $kit['config']['theme_name'];
-		self::$version = $kit['config']['theme_version'];
-		self::$text_domain = $kit['config']['text_domain'];
-		self::$jquery = $kit['config']['jquery_support'] ? array( 'jquery' ) : array();
+		self::$name          = $kit['config']['theme_name'];
+		self::$version       = $kit['config']['theme_version'];
+		self::$text_domain   = $kit['config']['text_domain'];
+		self::$jquery        = $kit['config']['jquery_support'] ? array( 'jquery' ) : array();
 		self::$custom_fields = $kit['config']['custom_fields'] ? $kit['config']['custom_fields'] : 'none';
 
 
 		// -----------------------------------------------------------------------
 		// Set Directory Data.
 		// -----------------------------------------------------------------------
-		self::$icon_dir = get_stylesheet_directory() . $kit['dir']['icon_dir'];
+		self::$icon_dir  = get_stylesheet_directory() . $kit['dir']['icon_dir'];
 		self::$image_dir = get_stylesheet_directory_uri() . $kit['dir']['image_dir'];
 
 		// -----------------------------------------------------------------------
 		// Set Assets Data.
 		// -----------------------------------------------------------------------
-		self::$styles = $kit['styles'];
+		self::$styles  = $kit['styles'];
 		self::$scripts = $kit['scripts'];
 
 		// -----------------------------------------------------------------------

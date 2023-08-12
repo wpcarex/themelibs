@@ -1,6 +1,8 @@
 <?php
 namespace Theme\Utilities;
 
+use Theme\Core\Bootstrap;
+
 /**
  * Helpers Extender.
  * -------------------------------------------------------------
@@ -33,9 +35,9 @@ class Helpers {
 	public static function get_icon( $icon = '', $type = 'inline' ) {
 
 		if ( $type === 'inline' ) {
-			echo file_get_contents( esc_attr( self::$icon_dir ) . esc_attr( $icon ) . '.svg' ); // phpcs:ignore
+			echo file_get_contents( esc_attr( Bootstrap::$icon_dir ) . esc_attr( $icon ) . '.svg' ); // phpcs:ignore
 		} else {
-			echo '<img src="' . esc_attr( self::$icon_dir ) . esc_attr( $icon ) . '.svg">'; // phpcs:ignore
+			echo '<img src="' . esc_attr( Bootstrap::$icon_dir ) . esc_attr( $icon ) . '.svg">'; // phpcs:ignore
 		}
 	}
 
@@ -124,11 +126,11 @@ class Helpers {
 	public static function get_image( $image, $alt = '', $class = '', $type = 'tag' ) {
 
 		if ( $type === 'tag' ) {
-			echo '<img class="' . esc_attr( $class ) . ' lazyload" src="' . esc_attr( self::$image_dir ) . esc_attr( $image ) . '" alt="' . esc_attr( $alt ) . '">';
+			echo '<img class="' . esc_attr( $class ) . ' lazyload" src="' . esc_attr( Bootstrap::$image_dir ) . esc_attr( $image ) . '" alt="' . esc_attr( $alt ) . '">';
 		}
 
 		if ( $type === 'url' ) {
-			return esc_attr( self::$image_dir ) . esc_attr( $image );
+			return esc_attr( Bootstrap::$image_dir ) . esc_attr( $image );
 		}
 
 	}
