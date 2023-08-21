@@ -68,7 +68,7 @@ final class Kit {
 	 * @param  mixed $args
 	 * @return void
 	 */
-	public static function component( $type = 'Page', $template, $args = array() ) {
+	public static function component( $template, $args = array(), $type = 'Page' ) {
 
 		Helpers::get_component( $template, $args, $type );
 
