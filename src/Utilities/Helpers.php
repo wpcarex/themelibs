@@ -90,7 +90,7 @@ class Helpers {
 	 * @since  1.0.0
 	 * @return $template.
 	 */
-	public static function get_component( $type, $template, $args = array() ) {
+	public static function get_component( $template, $args = array(), $type = 'Page' ) {
 
 		return get_template_part( 'src/Theme/' . $type . '/Static/components/' . $template, '', $args );
 
@@ -123,14 +123,14 @@ class Helpers {
 	 * @since 1.0.0
 	 * @return void
 	 */
-	public static function get_image( $image, $alt = '', $class = '', $type = 'tag' ) {
+	public static function get_image( $image, $type = 'tag', $alt = '', $class = '' ) {
 
 		if ( $type === 'tag' ) {
 			echo '<img class="' . esc_attr( $class ) . ' lazyload" src="' . esc_attr( Bootstrap::$image_dir ) . esc_attr( $image ) . '" alt="' . esc_attr( $alt ) . '">';
 		}
 
 		if ( $type === 'url' ) {
-			return esc_attr( Bootstrap::$image_dir ) . esc_attr( $image );
+			echo esc_attr( Bootstrap::$image_dir ) . esc_attr( $image );
 		}
 
 	}

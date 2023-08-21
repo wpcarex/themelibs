@@ -70,7 +70,7 @@ final class Kit {
 	 */
 	public static function component( $type = 'Page', $template, $args = array() ) {
 
-		Helpers::get_component( $type, $template, $args );
+		Helpers::get_component( $template, $args, $type );
 
 	}
 
