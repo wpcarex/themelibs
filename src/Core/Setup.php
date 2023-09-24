@@ -26,10 +26,9 @@ class Setup {
 	 * @since 1.0.0
 	 * @return void
 	 */
-	public function init_carbon_fields() {
+	public static function init_carbon_fields() {
 
-		if ( Kit::$custom_fields === 'carbon_fields' && Kit::$composer === true ) {
-
+		if ( Bootstrap::$custom_fields === 'carbonfields' && Bootstrap::$load_composer === true ) {
 			\Carbon_Fields\Carbon_Fields::boot();
 
 		}

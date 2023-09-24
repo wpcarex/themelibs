@@ -57,6 +57,13 @@ class Bootstrap {
 	public static $scripts = array();
 
 	/**
+	 * Load Composer.
+	 *
+	 * @var boolean $load_composer;
+	 */
+	public static $load_composer;
+
+	/**
 	 * JQuery allowance.
 	 *
 	 * @var string $jquery.
@@ -161,6 +168,7 @@ class Bootstrap {
 		self::$name          = $kit['config']['theme_name'];
 		self::$version       = $kit['config']['theme_version'];
 		self::$text_domain   = $kit['config']['text_domain'];
+		self::$load_composer = $kit['config']['load_composer'];
 		self::$jquery        = $kit['config']['jquery_support'] ? array( 'jquery' ) : array();
 		self::$custom_fields = $kit['config']['custom_fields'] ? $kit['config']['custom_fields'] : 'none';
 
